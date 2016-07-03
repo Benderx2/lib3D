@@ -19,6 +19,7 @@ typedef struct {
 
 typedef struct {
 	bool quit;
+	unsigned int count;
 } wp_event;
 
 void wp_init(void);

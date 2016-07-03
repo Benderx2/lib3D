@@ -1,5 +1,10 @@
 // Simple vector calculation implementation in C.
 #include "vector.h"
+
+vec3 _unitX = { 1.0f, 0.0f, 0.0f };
+vec3 _unitY = { 0.0f, 1.0f, 0.0f };
+vec3 _unitZ = { 0.0f, 0.0f, 1.0f };
+
 // Create a vector (malloc'd) and return value as void*. Free it yourself.
 void* vec_create(double x, double y, double z, double w, int type) {
 	vec2* myvec2 = NULL;

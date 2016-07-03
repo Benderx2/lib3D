@@ -15,7 +15,6 @@ void render(wp_display* disp, camera* cam, unsigned int n, ...) {
 	for(int i = 0; i < n; i++) {
 		// get current mesh
 		cmesh = va_arg(args, mesh*);
-		
 		// world matrix = rotation matrix * translation matrix
 		mesh_mat_rot = mat_rot_yawpitchroll(cmesh->rot.x, cmesh->rot.y, cmesh->rot.z);
 		mesh_mat_trans = mat_translation(cmesh->pos.x, cmesh->pos.y, cmesh->pos.z);

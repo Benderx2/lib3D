@@ -26,6 +26,10 @@ int wp_apply(wp_display* disp) {
 void wp_update(wp_display* disp) {
 	SDL_Flip(disp->buffer);
 }
+
+void wp_clear(wp_display* disp, int r, int g, int b, int a) {
+	SDL_FillRect(disp->buffer, NULL, SDL_MapRGBA(disp->buffer->format, r, g, b, a));
+}
 void wp_quit(wp_display* disp, int code) {
 	SDL_FreeSurface(disp->buffer);
 	free(disp);
@@ -49,4 +53,5 @@ void wp_track(wp_event* ev) {
 			ev->quit = false;
 		}
 	}
+	ev->count = SDL_GetTicks();
 }

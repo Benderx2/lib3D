@@ -32,9 +32,9 @@ typedef struct {
 	double w;
 } vec4;
 
-vec3 _unitX = { 1.0f, 0.0f, 0.0f };
-vec3 _unitY = { 0.0f, 1.0f, 0.0f };
-vec3 _unitZ = { 0.0f, 0.0f, 1.0f };
+extern vec3 _unitX;
+extern vec3 _unitY;
+extern vec3 _unitZ;
 
 void* vec_create(double x, double y, double z, double w, int type);
 

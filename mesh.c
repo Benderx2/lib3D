@@ -3,6 +3,7 @@
 mesh* mesh_create(unsigned int n) {
 	mesh* ptr = calloc(1, sizeof(mesh));
 	ptr->v = calloc(n, sizeof(vec3));
+	ptr->n = n;
 	return ptr;
 }
 
